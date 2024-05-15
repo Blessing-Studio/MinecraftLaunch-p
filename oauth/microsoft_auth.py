@@ -76,4 +76,5 @@ def oauth():
     })
     url = "https://api.minecraftservices.com/authentication/login_with_xbox"
     res = post(url = url, data = data)
-    print(res.text)
+    dic = loads(res.text)
+    break dic["access_token"]
